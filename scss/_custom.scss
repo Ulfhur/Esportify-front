@@ -9,13 +9,20 @@ $tertiary: #AEBFE0;
 
 // Font 
 
-$font_family_sans_serif: "Playfair Display";
+$font_family_sans_serif: "Playfair";
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
 
+/* Main */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html, body {
     height: 100%;
     margin: 0;
@@ -30,6 +37,8 @@ body {
 main {
     flex: 1;
 }
+
+/* Banner under Header */
 
 .hero-scene{
     position: relative;
@@ -59,21 +68,43 @@ main {
     }
 }
 
+/* Font styles */
+
+  /* Titles */
+
+.heroTitle {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 24px;
+    font-family: $font_family_sans_serif;
+    color: white;
+}
+
 .contentTitle{
     font-weight: bold;
     text-align: center;
     margin-bottom: 24px;
-    
+    font-family: $font_family_sans_serif;
+    color: black;
+}
+
+  /* Contents */
+
+.heroText {
+  text-align: center;
+    font-family: $font_family_sans_serif;
+    color: white;
 }
 
 .contentText{
     text-align: center;
     font-family: $font_family_sans_serif;
+    color: black;
 }
 
-/* Slider container */
-/* Slider container */
-/* Slider container */
+/* Slider Image */
+
+  /* Slider container */
 .slider {
   position: relative;
   width: 90%;
@@ -83,14 +114,14 @@ main {
   border-radius: 8px;
 }
 
-/* Slides container */
+  /* Slides container */
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
 }
 
-/* Images */
+  /* Images */
 .slides img {
   width: 100%;
   max-height: 400px;
@@ -99,7 +130,7 @@ main {
   border-radius: 8px;
 }
 
-/* Boutons */
+  /* Boutons */
 .buttonSlider {
   position: absolute;
   top: 50%;
@@ -116,10 +147,70 @@ main {
 button.prev { left: 10px; }
 button.next { right: 10px; }
 
-/* Texte en dessous de l'image */
+  /* Texte en dessous de l'image */
 .slider-caption {
   text-align: center;
   font-size: 1.1rem;
   font-weight: 500;
   color: black;
 }
+
+/* Tournament tiny window */
+
+.tournament-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 24px;
+}
+
+.tournament-card {
+  position: relative;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tournament-card:hover {
+  transform: scale(1.03);
+}
+
+.tournament-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0)
+  );
+  color: white;
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.overlay p {
+  margin: 5px 0;
+  font-weight: bold;
+  color: white;
+}
+
+.overlay span {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+
