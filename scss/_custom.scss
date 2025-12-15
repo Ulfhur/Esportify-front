@@ -16,8 +16,19 @@ $font_family_sans_serif: "Playfair Display";
 
 // Then add additional custom code here
 
-main{
-    background-color: $tertiary;
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #AEBFE0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 .hero-scene{
@@ -46,4 +57,69 @@ main{
         align-items: center;
         justify-content: center;
     }
+}
+
+.contentTitle{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 24px;
+    
+}
+
+.contentText{
+    text-align: center;
+    font-family: $font_family_sans_serif;
+}
+
+/* Slider container */
+/* Slider container */
+/* Slider container */
+.slider {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Slides container */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* Images */
+.slides img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+/* Boutons */
+.buttonSlider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.61);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+/* Texte en dessous de l'image */
+.slider-caption {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: black;
 }
