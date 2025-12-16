@@ -13,6 +13,12 @@ export const allRoutes = [
         "registerChoice",
         "/pages/registerChoice.html",
         ""
+    ),
+
+    new Route(
+        "/login",
+        "Login",
+        "/pages/login.html",
     )
 ];
 
