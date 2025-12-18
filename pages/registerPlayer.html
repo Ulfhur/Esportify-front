@@ -1,0 +1,45 @@
+<div class="login-container mt-2 mb-4">
+    <h1 class="contentTitle text-white mb-4">Inscription joueur</h1>
+    <form>
+        <div class="mb-3">
+            <label for="email" class="form-label">Adresse e-mail*</label>
+            <input type="email" class="form-control" id="email" placeholder="Entrez votre e-mail">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Mot de passe*</label>
+            <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe">
+        </div>
+        <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirmer le mot de passe*</label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmez votre mot de passe">
+        </div>
+        <div class="mb-3">
+            <label for="firstname" class="form-label">Prénom*</label>
+            <input type="text" class="form-control" id="firstname" placeholder="Entrez votre prénom">
+        </div>
+        <div class="mb-3">
+            <label for="lastname" class="form-label">Nom*</label>
+            <input type="text" class="form-control" id="lastname" placeholder="Entrez votre nom">
+        </div>
+        <div class="mb-3">
+            <label for="dateofbirth" class="form-label">Date de naissance*</label>
+            <input type="date" class="form-control" id="dateofbirth" placeholder="JJ/MM/AAAA">
+        </div>
+        <div class="mb-3">
+            <label for="gender" class="form-label">Genre</label>
+            <select class="form-select" id="gender">
+                <option selected>Choisir...</option>
+                <option value="male">Homme</option>
+                <option value="female">Femme</option>
+                <option value="other">Autre</option>
+            </select>
+        </div>
+        <div class="d-grid gap-2 pt-4 mb-2">
+            <button type="submit" class="btn btn-secondary">S'inscrire</button>
+        </div>
+        <i>Les champs suivis d'une (*) doivent obligatoirement être renseignés</i>
+    </form>
+</div>
+<a href="#/validateRegister">
+        <button class="btn btn-secondary mt-2">test</button>
+    </a>

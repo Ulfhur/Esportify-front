@@ -43,38 +43,63 @@ main {
 }
 
 i {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: white;
 }
+
+h1, p {
+    font-family: $font_family_sans_serif;
+    text-align: center;
+}
+
 /* Banner under Header */
 
-.hero-scene{
+.hero-scene {
     position: relative;
-    &::before{
-        content:"";
-        position: absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        background-image: url(../Images/bannière.png);
-        background-size: cover;
-        filter: brightness(0.2);
+    overflow: hidden;
+}
+
+.hero-scene::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../Images/bannière.png");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.2);
+    z-index: 0;
+}
+
+.hero-scene-content {
+    position: relative;
+    z-index: 1;
+
+    min-height: 35vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centrage vertical */
+    align-items: center;     /* centrage horizontal */
+
+    text-align: center;      /* texte centré */
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .hero-scene {
+        min-height: 60vh;
     }
 
-    *{
-        //Positionner les éléments devant le ::before
-        position:relative;
+    .hero-scene-content {
+        min-height: 60vh;
     }
 
-    .hero-scene-content{
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .hero-scene::before {
+        background-image: url("../Images/bannierGigantic.png");
     }
 }
+
+
 
 /* Font styles */
 
@@ -232,6 +257,18 @@ button.next { right: 10px; }
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: align;
+  color: white;
+}
+
+.registerRoleWindow {
+  width: 400px; 
+  max-width: 90%; 
+  margin: auto; 
+  padding: 30px; 
+  background-color: $primary; 
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
   color: white;
 }
 
