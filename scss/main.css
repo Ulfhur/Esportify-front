@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -12002,6 +12001,11 @@ main {
   flex: 1;
 }
 
+i {
+  font-size: 0.9rem;
+  color: white;
+}
+
 /* Banner under Header */
 .hero-scene {
   position: relative;
@@ -12169,4 +12173,17 @@ button.next {
 .overlay span {
   font-size: 14px;
   opacity: 0.9;
+}
+
+/* Login Window */
+.login-container {
+  width: 300px;
+  max-width: 90%;
+  margin: auto;
+  padding: 30px;
+  background-color: #0D0217;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: align;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
